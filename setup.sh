@@ -5,7 +5,7 @@ echo Building out the finance tracker structure...
 
 # make entire folder and contents within folder
 mkdir finance-tracker
-cd finance-tracker
+cd finance-tracker || return 1
 
 mkdir server routes utils
 
