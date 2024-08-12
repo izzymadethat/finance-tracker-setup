@@ -27,7 +27,7 @@ touch .env
 echo -e "node_modules\n.env*" >>.gitignore
 
 # add DB file to .env
-echo -e "DATABASE_FILE='file:./database/development.db\nPORT=5174'" >>.env
+echo -e "DATABASE_FILE='file:../database/development.db'\nPORT=5174" >>.env
 
 # add readme file
 echo -e '# Finance Tracker\nThis is a Finance Tracker API built using EXPRESS, PRISMA, SQLITE, and KINDE' >>README.md
