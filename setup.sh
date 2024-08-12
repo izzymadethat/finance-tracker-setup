@@ -20,6 +20,9 @@ touch routes/auth.js routes/categories.js routes/transactions.js
 # add kinde config
 touch utils/kinde.config.js
 
+# add prisma config
+touch utils/prisma.config.js
+
 # add .env file
 touch .env
 
