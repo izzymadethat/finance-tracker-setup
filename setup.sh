@@ -7,7 +7,7 @@ echo -e "Building out the finance tracker structure...\n"
 mkdir finance-tracker
 cd finance-tracker || return 1
 
-mkdir frontend backend backend/server backend/routes backend/utils backend/database
+mkdir frontend backend backend/server backend/routes backend/utils backend/database backend/utils/functions
 
 cd backend || exit 1
 
@@ -22,6 +22,25 @@ touch utils/kinde.config.js
 
 # add prisma config
 touch utils/prisma.config.js
+
+# add functions file
+touch utils/functions/index.js
+
+# add routes index.js file and add dynamic file paths
+cat <<'EOF' >index.js
+const fs = require("fs");
+const path = require("path");
+const routers = {};
+
+fs.readdirSync(__dirname)
+  .filter((file) => file !== "index.js" && file.endsWith(".js"))
+  .forEach((file) => {
+    const routerName = path.basename(file, ".js") + "Router";
+    routers[routerName] = require(path.join(__dirname, file));
+  });
+
+module.exports = routers;
+EOF
 
 # add .env file
 touch .env
@@ -41,7 +60,7 @@ printf "Initializing and installing npm and dependencies........\n\n"
 npm init -y
 
 npm install sqlite3 express dotenv @kinde-oss/kinde-nodejs-sdk @prisma/client
-npm install -D nodemon prisma sequelize-cli dotenv-cli
+npm install -D nodemon prisma sequelize-cli dotenv-cli cors
 
 printf "Initializing prisma........\n\n"
 
