@@ -27,7 +27,7 @@ touch utils/prisma.config.js
 touch utils/functions/index.js
 
 # add routes index.js file and add dynamic file paths
-cat <<'EOF' >index.js
+cat <<'EOF' >routes/index.js
 const fs = require("fs");
 const path = require("path");
 const routers = {};
