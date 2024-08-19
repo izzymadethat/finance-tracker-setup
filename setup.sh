@@ -119,7 +119,7 @@ cd ../frontend || exit 1
 
 printf "Building frontend........\n\n"
 
-npx create-next-app@latest .
+npx create-next-app@latest . --js --eslint --tailwind --app --src-dir --no-experimental-app --import-alias "@/*"
 
 printf "Adding version control........\n\n"
 
