@@ -4,8 +4,24 @@ This is a Finance Tracker API built using Express, Sequelize, SQLite, and Kinde.
 
 ## Project Setup
 
-To get started with this project, follow these instructions:
+There are 2 ways to get started with this project:
 
+## OPTION 1 - via Curl `recommended`
+
+### 1. Open your terminal and navigate to where you store your projects (if not the home directory)
+### 2. Once there, copy and paste the following command based on your terminal
+
+```bash
+curl -sL https://github.com/izzymadethat/finance-tracker-setup/raw/main/setup.sh | bash
+```
+
+_The following command builds and run our entire folder setup without needing to setup the folders yourself or needing to clone this repo._
+
+### 3. Follow along with me and let's get started!
+[![Build a Finance Tracker](https://github.com/user-attachments/assets/377ec88a-7345-4773-867c-39757b822600)](https://youtube.com/playlist?list=PLjmmSe-da5oq81O_LOQDgm8mUrfgBrz6_&si=IbJZxBmAFAYJz9rO)
+
+
+## Option 2 - via Cloning the Repo **_(PLEASE READ CAREFULLY)_**
 ### 1. Clone the Repository
 
 Clone this repo to your local machine (place wherever you normally put your projects):
@@ -110,4 +126,5 @@ finance-tracker
 11 directories, 22 files
 ```
 
-### If so, then we're ready to get started with building our API!
+### If so, then we're ready to get started with building our Project!
+[![Build a Finance Tracker](https://github.com/user-attachments/assets/377ec88a-7345-4773-867c-39757b822600)](https://youtube.com/playlist?list=PLjmmSe-da5oq81O_LOQDgm8mUrfgBrz6_&si=IbJZxBmAFAYJz9rO)
